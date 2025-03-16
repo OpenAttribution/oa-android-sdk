@@ -55,15 +55,14 @@ class MyApplication : Application() {
 
 ```
 
-Add to `AndroidManfiest.xml` if doesn't exist yet:
+Add to `AndroidManfiest.xml` if doesn't exist yet.  OpeenAttribution reequires internet permission and add the `MyApplication` to your application if you do not yet have an Application class.
 
 ```xml
 
-//OpeenAttribution reequires internet connection
 <uses-permission android:name="android.permission.INTERNET" />
 
 <application
-        // MyApplicaiton is the name of your Application class above
+       
         android:name=".MyApplication"
         ...
 
