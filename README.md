@@ -46,14 +46,26 @@ import dev.openattribution.sdk.OpenAttribution
 
 class MyApplication : Application() {
 
-    private lateinit var openAttribution: OpenAttribution
-
     override fun onCreate() {
         super.onCreate()
         // Initialize the OpenAttribution SDK, replace with your domain
-        openAttribution = OpenAttribution.initialize(this, "https://demo.openattribution.dev")
+        OpenAttribution.initialize(this, "https://demo.openattribution.dev")
     }
 }
+
+```
+
+Add to `AndroidManfiest.xml` if doesn't exist yet:
+
+```xml
+
+//OpeenAttribution reequires internet connection
+<uses-permission android:name="android.permission.INTERNET" />
+
+<application
+        // MyApplicaiton is the name of your Application class above
+        android:name=".MyApplication"
+        ...
 
 ```
 
